@@ -81,6 +81,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F5944EF2C2E78FB002DF869 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A65474372C232A20006F5E27 /* CrearUsuarioViewController.swift */,
+				A65474352C232A20006F5E27 /* iniciarSesionViewController.swift */,
+				1F635B392C27170900497533 /* ComuniViewController.swift */,
+				1F635B372C27148D00497533 /* AudioViewController.swift */,
+				A65474342C232A20006F5E27 /* ElegirUsuariosViewController.swift */,
+				A654743A2C232A20006F5E27 /* EscucharAudioViewController.swift */,
+				1FC8D87F2C1B832A0078387F /* ViewController.swift */,
+				1F3E5EBF2C28931C00F49BFD /* BuscarViewController.swift */,
+				1F3E5EC32C2896F500F49BFD /* AgregarViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		1FC8D86F2C1B832A0078387F = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				A654745A2C2336EE006F5E27 /* Modelos */,
-				1FC8D88F2C1B83D90078387F /* ViewControllers */,
+				1F5944EF2C2E78FB002DF869 /* ViewControllers */,
 				1FC8D87B2C1B832A0078387F /* AppDelegate.swift */,
 				1FC8D87D2C1B832A0078387F /* SceneDelegate.swift */,
 				1F832C6B2C20FB1A00346464 /* Main.storyboard */,
@@ -114,22 +130,6 @@
 				1F3E5EC62C28A36800F49BFD /* CombiTableViewCell.xib */,
 			);
 			path = miCombi;
-			sourceTree = "<group>";
-		};
-		1FC8D88F2C1B83D90078387F /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				A65474372C232A20006F5E27 /* CrearUsuarioViewController.swift */,
-				A65474352C232A20006F5E27 /* iniciarSesionViewController.swift */,
-				1F635B392C27170900497533 /* ComuniViewController.swift */,
-				1F635B372C27148D00497533 /* AudioViewController.swift */,
-				A65474342C232A20006F5E27 /* ElegirUsuariosViewController.swift */,
-				A654743A2C232A20006F5E27 /* EscucharAudioViewController.swift */,
-				1FC8D87F2C1B832A0078387F /* ViewController.swift */,
-				1F3E5EBF2C28931C00F49BFD /* BuscarViewController.swift */,
-				1F3E5EC32C2896F500F49BFD /* AgregarViewController.swift */,
-			);
-			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		A654744A2C232E4E006F5E27 /* Frameworks */ = {
