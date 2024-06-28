@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+class Comuni{
+    var from = ""
+    var id = ""
+    var audioURL = ""
+    var audioID = ""
+    var audioDescrip = ""
+}

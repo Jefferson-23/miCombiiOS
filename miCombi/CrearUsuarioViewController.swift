@@ -1,11 +1,12 @@
 //
 //  CrearUsuarioViewController.swift
-//  SnapChat
+//  miCombi
 //
-//  Created by Jefferson Coaquira Cruz on 6/1/24.
+//  Created by Jefferson on 19/06/24.
 //
 
 import UIKit
+import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 
@@ -30,14 +31,14 @@ class CrearUsuarioViewController: UIViewController {
         
         Auth.auth().createUser(withEmail: email, password: password) { user, error in
             if let error = error {
-                print("Error creando usuario: \(error.localizedDescription)")
-                self.showAlert(title: "Error", message: "No se pudo crear el usuario. \(error.localizedDescription)")
+                print("Error creando conductor: \(error.localizedDescription)")
+                self.showAlert(title: "Error", message: "No se pudo crear el conductor. \(error.localizedDescription)")
             } else {
-                print("Usuario creado exitosamente")
+                print("Conductor creado exitosamente")
                 if let uid = user?.user.uid {
-                    Database.database().reference().child("usuarios").child(uid).child("email").setValue(email)
+                    Database.database().reference().child("conductores").child(uid).child("email").setValue(email)
                 }
-                self.showAlert(title: "Creación de Usuario", message: "Usuario: \(email) se creó correctamente.", dismiss: true)
+                self.showAlert(title: "Creación de Conductor", message: "Conductor: \(email) se creó correctamente.", dismiss: true)
             }
         }
     }

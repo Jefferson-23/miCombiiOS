@@ -1,3 +1,10 @@
+//
+//  EscucharAudioViewController.swift
+//  miCombi
+//
+//  Created by Jefferson on 19/06/24.
+//
+
 import UIKit
 import AVFoundation
 import Firebase
@@ -9,7 +16,7 @@ class EscucharAudioViewController: UIViewController {
     @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
-    var snap = Snap()
+    var comuni = Comuni()
     var audioDescrip: String?
     var audioURL: URL?
     var audioPlayer: AVAudioPlayer?
@@ -26,7 +33,7 @@ class EscucharAudioViewController: UIViewController {
         if let url = audioURL {
             downloadAndPrepareAudio(from: url)
         }
-        titleLabel.text = "Titulo: " + snap.audioDescrip
+        titleLabel.text = "Titulo: " + comuni.audioDescrip
     }
     
     override func viewDidDisappear(_ animated: Bool) {

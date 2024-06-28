@@ -1,11 +1,12 @@
 //
 //  ViewController.swift
-//  SnapChats
+//  miCombi
 //
-//  Created by Jefferson on 22/05/24.
+//  Created by Jefferson on 19/06/24.
 //
 
 import UIKit
+import Firebase
 import FirebaseCore
 import FirebaseAuth
 import GoogleSignIn
@@ -45,7 +46,7 @@ class iniciarSesionViewController: UIViewController {
         }
     }
     private func showUserNotFoundAlert() {
-        let alert = UIAlertController(title: "Usuario no encontrado", message: "No se encontró un usuario con este correo electrónico. ¿Desea crear un nuevo usuario?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Conductor no encontrado", message: "No se encontró un conductor con este correo electrónico. ¿Desea crear un nuevo conductor?", preferredStyle: .alert)
         let crearAction = UIAlertAction(title: "Crear", style: .default) { _ in
             self.performSegue(withIdentifier: self.crearUsuarioSegueIdentifier, sender: nil)
         }
@@ -61,7 +62,7 @@ class iniciarSesionViewController: UIViewController {
     }
     private func setupGoogleSignIn() {
         guard let clientID = FirebaseApp.app()?.options.clientID else {
-            fatalError("No se encontró el ID de cliente en la configuración de Firebase")
+            fatalError("No se encontró el ID de conductor en la configuración de Firebase")
         }
         let config = GIDConfiguration(clientID: clientID)
         GIDSignIn.sharedInstance.configuration = config

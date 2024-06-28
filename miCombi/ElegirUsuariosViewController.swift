@@ -1,8 +1,8 @@
 //
 //  ElegirUsuariosViewController.swift
-//  SnapChat
+//  miCombi
 //
-//  Created by Jefferson Coaquira Cruz on 6/7/24.
+//  Created by Jefferson on 19/06/24.
 //
 
 import UIKit
@@ -20,7 +20,7 @@ class ElegirUsuariosViewController: UIViewController,UITableViewDataSource, UITa
         super.viewDidLoad()
         listaUsuarios.delegate=self
         listaUsuarios.dataSource=self
-        Database.database().reference().child("usuarios").observe(DataEventType.childAdded,with: {(snapshot) in print(snapshot)
+        Database.database().reference().child("conductores").observe(DataEventType.childAdded,with: {(snapshot) in print(snapshot)
             let usuario = Usuario()
             usuario.email = (snapshot.value as! NSDictionary)["email" ] as! String
             usuario.uid = snapshot.key
@@ -46,7 +46,7 @@ class ElegirUsuariosViewController: UIViewController,UITableViewDataSource, UITa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         let usuario = usuarios[indexPath.row]
         let snap = ["from" : Auth.auth().currentUser?.email, "audioDescrip":audioDescrip, "audioURL": audioURL,"audioID" : audioID]
-                Database.database().reference().child("usuarios").child(usuario.uid).child("snaps").childByAutoId().setValue(snap)
+                Database.database().reference().child("conductores").child(usuario.uid).child("comunicados").childByAutoId().setValue(snap)
                 navigationController?.popViewController(animated: true)
     }
     

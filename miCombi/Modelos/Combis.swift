@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct Combi: Decodable {
+    let usuarioId: Int
+    let id: Int
+    let nombre: String
+    let imagen: String
+    let nrutas: String
+    let nunidades: String
+}
