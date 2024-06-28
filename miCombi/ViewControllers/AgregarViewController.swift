@@ -64,7 +64,6 @@ class AgregarViewController: UIViewController {
         let session = URLSession.shared
         request.httpMethod = "POST"
         
-        let params = datos
         do {
             request.httpBody = try JSONSerialization.data(withJSONObject: datos, options: JSONSerialization.WritingOptions.prettyPrinted)
         } catch {
@@ -92,7 +91,6 @@ class AgregarViewController: UIViewController {
         let session = URLSession.shared
         request.httpMethod = "PUT"
         
-        let params = datos
         do {
             request.httpBody = try JSONSerialization.data(withJSONObject: datos, options: JSONSerialization.WritingOptions.prettyPrinted)
         } catch {

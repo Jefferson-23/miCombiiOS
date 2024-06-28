@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F28CFDF2C2F237600BF36F1 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 1F28CFDE2C2F237600BF36F1 /* FacebookCore */; };
+		1F28CFE12C2F23A000BF36F1 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 1F28CFE02C2F23A000BF36F1 /* FacebookLogin */; };
 		1F3E5EC02C28931C00F49BFD /* BuscarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3E5EBF2C28931C00F49BFD /* BuscarViewController.swift */; };
 		1F3E5EC22C28964C00F49BFD /* Combis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3E5EC12C28964C00F49BFD /* Combis.swift */; };
 		1F3E5EC42C2896F500F49BFD /* AgregarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3E5EC32C2896F500F49BFD /* AgregarViewController.swift */; };
@@ -67,7 +69,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F28CFE12C2F23A000BF36F1 /* FacebookLogin in Frameworks */,
 				A65474472C232B75006F5E27 /* GoogleSignInSwift in Frameworks */,
+				1F28CFDF2C2F237600BF36F1 /* FacebookCore in Frameworks */,
 				A65474452C232B75006F5E27 /* GoogleSignIn in Frameworks */,
 				A65474242C23289E006F5E27 /* FirebaseAnalytics in Frameworks */,
 				A654742A2C23289E006F5E27 /* FirebaseDatabase in Frameworks */,
@@ -174,6 +178,8 @@
 				A65474442C232B75006F5E27 /* GoogleSignIn */,
 				A65474462C232B75006F5E27 /* GoogleSignInSwift */,
 				A654744B2C232E4E006F5E27 /* FirebaseFirestoreSwift */,
+				1F28CFDE2C2F237600BF36F1 /* FacebookCore */,
+				1F28CFE02C2F23A000BF36F1 /* FacebookLogin */,
 			);
 			productName = miCombi;
 			productReference = 1FC8D8782C1B832A0078387F /* miCombi.app */;
@@ -206,6 +212,7 @@
 			packageReferences = (
 				A65474222C23289E006F5E27 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				A65474432C232B75006F5E27 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				1F28CFDB2C2F1C6400BF36F1 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = 1FC8D8792C1B832A0078387F /* Products */;
 			projectDirPath = "";
@@ -320,7 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -377,7 +384,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -392,10 +399,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = miCombi/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Se requiere acceso al micrófono para grabar comunicado.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -409,6 +420,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = miempresa.com.miCombi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -420,10 +432,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = miCombi/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Se requiere acceso al micrófono para grabar comunicado.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -437,6 +453,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = miempresa.com.miCombi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -467,6 +484,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1F28CFDB2C2F1C6400BF36F1 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.1.0;
+			};
+		};
 		A65474222C23289E006F5E27 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -486,6 +511,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1F28CFDE2C2F237600BF36F1 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F28CFDB2C2F1C6400BF36F1 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		1F28CFE02C2F23A000BF36F1 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F28CFDB2C2F1C6400BF36F1 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
 		A65474232C23289E006F5E27 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A65474222C23289E006F5E27 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

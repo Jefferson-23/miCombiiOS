@@ -90,12 +90,11 @@
                                 <rect key="frame" x="235" y="550" width="44" height="34"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" image="github-mark 1" imagePlacement="leading" imagePadding="12">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                <buttonConfiguration key="configuration" style="gray" image="github-mark 1">
                                     <color key="baseBackgroundColor" white="0.66666666669999997" alpha="0.39487670070000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="iniciarSesionGoogleTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1UQ-Kk-NKt"/>
+                                    <action selector="iniciarSesionFacebookTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pPq-PY-Gih"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -128,6 +127,7 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="ptW-ID-Gpq" id="f9r-f2-QFs"/>
+                        <outlet property="facebookLoginButton" destination="5SF-ck-0eY" id="dc4-hK-ZH1"/>
                         <outlet property="passwordTextField" destination="ANe-Sn-uAR" id="Ilo-lT-dcg"/>
                         <segue destination="xhS-nX-gdd" kind="presentation" identifier="iniciarsesionsegue" id="YEu-vK-lht"/>
                         <segue destination="ruF-Ne-zfD" kind="show" identifier="crearUsuarioSegue" id="wm0-D7-Xfp"/>
