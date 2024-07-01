@@ -14,7 +14,7 @@ class BuscarViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tablaCombis.delegate = self
         tablaCombis.dataSource = self
         
-        let ruta = "http://localhost:3000/combis/"
+        let ruta = "http://64.23.129.61:8080/combis/"
         cargarCombis(ruta: ruta) {
             self.tablaCombis.reloadData()
         }
@@ -22,7 +22,7 @@ class BuscarViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let ruta = "http://localhost:3000/combis/"
+        let ruta = "http://64.23.129.61:8080/combis/"
         cargarCombis(ruta: ruta) {
             self.tablaCombis.reloadData()
         }
@@ -35,13 +35,13 @@ class BuscarViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var tablaCombis: UITableView!
     
     @IBAction func btnBuscar(_ sender: Any) {
-        let ruta = "http://localhost:3000/combis?"
+        let ruta = "http://64.23.129.61:8080/combis?"
         let nombre = txtBuscar.text!
         let url = ruta + "nombre_like=\(nombre)"
         let crearURL = url.replacingOccurrences(of: " ", with: "%20")
         
         if nombre.isEmpty {
-            let ruta = "http://localhost:3000/combis/"
+            let ruta = "http://64.23.129.61:8080/combis/"
             self.cargarCombis(ruta: ruta) {
                 self.tablaCombis.reloadData()
             }
@@ -74,7 +74,7 @@ class BuscarViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func eliminarCombi(combi: Combi, completed: @escaping () -> ()) {
-        guard let url = URL(string: "http://localhost:3000/combis/\(combi.id)") else {
+        guard let url = URL(string: "http://64.23.129.61:8080/combis/\(combi.id)") else {
             return
         }
         
@@ -123,7 +123,7 @@ class BuscarViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 let combi = self.combis[indexPath.row]
                 self.eliminarCombi(combi: combi) {
                     self.combis.remove(at: indexPath.row)
-                    let ruta = "http://localhost:3000/combis/"
+                    let ruta = "http://64.23.129.61:8080/combis/"
                     self.cargarCombis(ruta: ruta) {
                         self.tablaCombis.reloadData()
                     }

@@ -40,7 +40,7 @@ class AgregarViewController: UIViewController {
         let nunidades = txtNunidades.text!
         let imagen = txtImagen.text!
         let datos = ["usuarioId": 1, "nombre": "\(nombre)", "nrutas": "\(nrutas)", "nunidades": "\(nunidades)", "imagen": "\(imagen)"] as Dictionary<String, Any>
-        let ruta = "http://localhost:3000/combis"
+        let ruta = "http://64.23.129.61:8080/combis"
         metodoPOST(ruta: ruta, datos: datos)
         navigationController?.popViewController(animated: true)
     }
@@ -51,7 +51,7 @@ class AgregarViewController: UIViewController {
         let nunidades = txtNunidades.text!
         let imagen = txtImagen.text!
         let datos = ["usuarioId": 1, "nombre": "\(nombre)", "nrutas": "\(nrutas)", "nunidades": "\(nunidades)", "imagen": "\(imagen)"] as Dictionary<String, Any>
-        let ruta = "http://localhost:3000/combis/\(combi!.id)"
+        let ruta = "http://64.23.129.61:8080/combis/\(combi!.id)"
         metodoPUT(ruta: ruta, datos: datos)
         navigationController?.popViewController(animated: true)
 
